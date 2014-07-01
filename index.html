@@ -2,26 +2,12 @@
 <html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <style type="text/css">
-      html { height: 100% }
-      body { height: 100%; margin: 0; padding: 0; background-color: #E80923;}
-      #map-canvas { height: 90%; width: 90%; margin: 0 auto;
-    </style>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJSTWmmNuWdGoJhaczP7ZTBLUYcvN5co8">
     </script>
-    <script type="text/javascript">
-      function initialize() {
-        var mapOptions = {
-          center: new google.maps.LatLng(40.7607793, -111.8910474),
-          zoom: 6
-        };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
-            mapOptions);
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
   </head>
   <body>
     <div id="map-canvas"/>
   </body>
+  <script type="text/javascript" src="maps.js"></script>
 </html>
