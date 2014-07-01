@@ -9,10 +9,17 @@ body {
   background-image: url("http://www.eastex.net/billcline/files/startmap3.JPG");
 }
 
+h1 {
+  color: #D1CD5C;
+  font-family: 'Metamorphous';
+  margin: 1em 5em 0 12em;
+}
+
 #map-canvas { 
   height: 85%; 
   width: 85%; 
   margin: 3em 3em 2em 5em;
   padding-left: 1em;
   border-radius: 0.3em;
+  border: 0.2em solid #D1CD5C;
 }
