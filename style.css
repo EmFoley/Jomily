@@ -6,11 +6,13 @@ body {
   height: 100%; 
   margin: 0; 
   padding: 0; 
-  background-color: #E80923;
+  background-image: url("http://www.eastex.net/billcline/files/startmap3.JPG");
 }
 
 #map-canvas { 
-  height: 90%; 
-  width: 90%; 
-  margin: 0 auto;
+  height: 85%; 
+  width: 85%; 
+  margin: 3em 3em 2em 5em;
+  padding-left: 1em;
+  border-radius: 0.3em;
 }
