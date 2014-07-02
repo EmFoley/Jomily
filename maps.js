@@ -11,22 +11,25 @@ function initialize() {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
-function allThePlaces() {
-  var placesList = [
-    (40.7607793, -111.8910474),
+// function allThePlaces() {
 
-  ]
-}
+// }
 
 function markerMaker() {
-  var marker = new google.maps.Marker({
-      position: location,
-      map: map,
-      title:"Salt Lake City!",
-      visible: true
-  });
-  marker.setMap(map);
-};
+  var placesList = [
+    (40.7607793, -111.8910474),
+    (40.7607793, -110.8910474)
+  ]
+    for(i=0, i < placesList.length, i++) {
+      var marker = new google.maps.Marker({
+          position: i,
+          map: map,
+          visible: true
+      });
+      marker.setMap(map);
+    };
+  };
+
 
 
 
