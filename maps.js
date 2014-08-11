@@ -1,5 +1,7 @@
+var location = new google.maps.LatLng(40.7607793, -111.8910474);
+var map;
+
 function initialize() {
-  var location = new google.maps.LatLng(40.7607793, -111.8910474)
   var mapOptions = {
     center: location,
     zoom: 6
@@ -11,19 +13,16 @@ function initialize() {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
-
-function markerMaker() {
-  var placesList = [
+var placesList = [
     [40.7607793, -111.8910474],
     [40.7607793, -110.8910474]
-  ]
+  ];
+function markerMaker() {
     for(i=0; i < placesList.length; i++) {
       var marker = new google.maps.Marker({
-          position: new google.maps.LatLng(placesList[i]),
-          map: map,
+          position: new google.maps.LatLng(placesList[i].toString()),
           visible: true
       });
-
       marker.setMap(map);
     };
   };
