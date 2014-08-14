@@ -69,13 +69,26 @@ var test = [
   new google.maps.LatLng(33.770050, -118.193739),
   new google.maps.LatLng(34.090009, -118.361744)
 ]
+
+ var lineSymbol = {
+    path: 'M 0,-1 0,1',
+    strokeOpacity: 1,
+    scale: 4
+  };
+
 function travelLines() {
   var travelPath = new google.maps.Polyline({
     path: test,
     geodesic: true,
-    strokeColor: '#FFF0000',
-    strokeOpacity: 1.0,
-    strokeWeight: 2
+    strokeColor: '#E33E10',
+    strokeOpacity: 0,
+    icons: [{
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '20px'
+        }],
+    strokeWeight: 2,
+    clickable: true
   });
   travelPath.setMap(map);
 };
