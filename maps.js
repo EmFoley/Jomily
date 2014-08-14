@@ -7,6 +7,7 @@ function initialize() {
   map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
   markerMaker();
+  travelLines();
 };
 
 google.maps.event.addDomListener(window, 'load', initialize);
@@ -46,13 +47,31 @@ function markerMaker() {
       linesList.push(marker);
     };
     return linesList
-    travelLines();
   };
 
-
+var test = [
+  new google.maps.LatLng(45.523452, -122.676207),
+  new google.maps.LatLng(37.774929, -122.419416),
+  new google.maps.LatLng(45.727619, -121.486462),
+  new google.maps.LatLng(47.606209, -122.332071),
+  new google.maps.LatLng(48.551367, -123.078106),
+  new google.maps.LatLng(47.658780, -117.426047),
+  new google.maps.LatLng(43.479929, -110.762428),
+  new google.maps.LatLng(44.427963, -110.588455),
+  new google.maps.LatLng(44.526342, -109.056531),
+  new google.maps.LatLng(48.759613, -113.787023),
+  new google.maps.LatLng(40.7607793, -111.8910474),
+  new google.maps.LatLng(37.811941, -107.664506),
+  new google.maps.LatLng(36.861897, -111.374438),
+  new google.maps.LatLng(36.056198, -112.125202),
+  new google.maps.LatLng(36.212424, -112.065255),
+  new google.maps.LatLng(37.322817, -113.045716),
+  new google.maps.LatLng(33.770050, -118.193739),
+  new google.maps.LatLng(34.090009, -118.361744)
+]
 function travelLines() {
   var travelPath = new google.maps.Polyline({
-    path: linesList,
+    path: test,
     geodesic: true,
     strokeColor: '#FFF0000',
     strokeOpacity: 1.0,
